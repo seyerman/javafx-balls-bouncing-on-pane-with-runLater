@@ -41,15 +41,19 @@ public class Ball {
 	public void move(double max) {
 		switch(state) {
 			case FORWARD:
-				x = x+ADVANCE;
-				if(x+r>max) {
+				if(x+ADVANCE+r>max) {
 					state = StateOfMove.BACKWARD;
+					x = max-r;
+				}else {
+					x = x+ADVANCE;					
 				}
 			break;
 			case BACKWARD:
-				x = x-ADVANCE;
-				if(x<0) {
+				if(x-ADVANCE-r<0) {
 					state = StateOfMove.FORWARD;
+					x = r;
+				}else {
+					x = x-ADVANCE;					
 				}
 			break;
 		}

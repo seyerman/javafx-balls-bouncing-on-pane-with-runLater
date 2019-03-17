@@ -33,6 +33,10 @@ public class BallBouncingGUI {
     	GUIUpdateControlThread gut = new GUIUpdateControlThread(this);
     	gut.setDaemon(true);
     	gut.start();
+    	Circle cx = new Circle(50,Color.RED);
+    	cx.setLayoutX(0);
+    	cx.setLayoutY(0);
+    	pane.getChildren().add(cx);    	
     }
     
     public void setStage(Stage st) {
@@ -77,7 +81,7 @@ public class BallBouncingGUI {
 	}
 
 	public double getWith() {
-		return stage.getWidth();
+		return stage.getScene().getWidth();
 	}
 
 }
