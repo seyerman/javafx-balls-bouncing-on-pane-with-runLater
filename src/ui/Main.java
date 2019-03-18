@@ -22,7 +22,7 @@ public class Main extends Application{
 		
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
-		stage.setTitle("Ball bouncing with common threads on a pane node");
+		stage.setTitle("Ball bouncing with common threads on a pane node plus a special thread updating the GUI");
 		stage.show();
 	}
 
